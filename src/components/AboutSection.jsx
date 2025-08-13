@@ -1,27 +1,18 @@
 import {  Code, } from "lucide-react";
 import { BiMobile } from "react-icons/bi";
 import { VscAzureDevops } from "react-icons/vsc";
-import {motion} from 'motion/react'
-import { fadeIn } from "../../variants";
 
 export const AboutSection = () => {
   return (
-    <motion.div    
-    variants={fadeIn('up',0.5)}
-    initial="hidden"
-    whileInView={"show"}
-    viewport={{once:false,amount:0.7}} id="about" className="py-24 px-4 relative">
+    <div    
+   id="about" className="py-24 px-4 relative">
       {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           <span className="text-primary">  A Propos</span>
         </h2>
 
-        <motion.div 
-        variants={fadeIn('left',0.5)}
-    initial="hidden"
-    whileInView={"show"}
-    viewport={{once:false,amount:0.7}} className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
               Développeur fullstack passionné & créateur tech 
@@ -91,8 +82,8 @@ Passionné par la résolution élégante de problèmes complexes, je continue d�
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
