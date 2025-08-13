@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 // id, size, x, y, opacity, animationDuration
 // id, size, x, y, delay, animationDuration
@@ -60,36 +61,77 @@ export const StarBackground = () => {
   };
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <motion.div 
+      className="fixed inset-0 overflow-hidden pointer-events-none z-0"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
       {stars.map((star) => (
-        <div
+        <motion.div
           key={star.id}
-          className="star animate-pulse-subtle"
+          className="star"
           style={{
             width: star.size + "px",
             height: star.size + "px",
             left: star.x + "%",
             top: star.y + "%",
-            opacity: star.opacity,
-            animationDuration: star.animationDuration + "s",
           }}
-        />
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ 
+            opacity: star.opacity,
+            scale: 1
+          }}
+          transition={{ 
+            duration: 0.5,
+            delay: Math.random() * 2
+          }}
+        >
+          <motion.div
+            animate={{ 
+              opacity: [0.3, 1, 0.3],
+              scale: [0.8, 1.2, 0.8]
+            }}
+            transition={{
+              duration: star.animationDuration,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="w-full h-full bg-white rounded-full"
+          />
+        </motion.div>
       ))}
 
       {meteors.map((meteor) => (
-        <div
+        <motion.div
           key={meteor.id}
-          className="meteor animate-meteor"
+          className="meteor"
           style={{
             width: meteor.size * 50 + "px",
             height: meteor.size * 2 + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",
-            animationDelay: meteor.delay,
-            animationDuration: meteor.animationDuration + "s",
           }}
-        />
+          initial={{ 
+            opacity: 0,
+            x: -100,
+            y: -100
+          }}
+          animate={{
+            opacity: [0, 1, 0],
+            x: [0, 200, 400],
+            y: [0, 200, 400]
+          }}
+          transition={{
+            duration: meteor.animationDuration,
+            delay: meteor.delay,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-r from-transparent via-white to-transparent rounded-full" />
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
