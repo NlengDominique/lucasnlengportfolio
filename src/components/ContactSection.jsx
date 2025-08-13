@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
+
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,19 +34,18 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In <span className="text-primary"> Touch</span>
+         <span className="text-primary"> Contactez-moi </span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+    Vous avez un projet en tête ou envie de collaborer ? N’hésitez pas à me contacter. Je suis toujours ouvert à discuter de nouvelles opportunités.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">
               {" "}
-              Contact Information
+              Infos Contact
             </h3>
 
             <div className="space-y-6 justify-center">
@@ -59,7 +59,7 @@ export const ContactSection = () => {
                     href="mailto:hello@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    hello@gmail.com
+                    luqnleng5@gmail.com
                   </a>
                 </div>
               </div>
@@ -68,12 +68,12 @@ export const ContactSection = () => {
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="font-medium"> Telephone</h4>
                   <a
                     href="tel:+11234567890"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    +1 (123) 456-7890
+                    +237 698203241
                   </a>
                 </div>
               </div>
@@ -82,16 +82,16 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
+                  <h4 className="font-medium"> Ville</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Vancouver, BC, Canada
+                   Douala Cameroun
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
+              <h4 className="font-medium mb-4"> Mes reseaux</h4>
               <div className="flex space-x-4 justify-center">
                 <a href="#" target="_blank">
                   <Linkedin />
@@ -113,7 +113,7 @@ export const ContactSection = () => {
             className="bg-card p-8 rounded-lg shadow-xs"
             onSubmit={handleSubmit}
           >
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6"> Me Contacter</h3>
 
             <form className="space-y-6">
               <div>
@@ -122,7 +122,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Name
+                   Nom
                 </label>
                 <input
                   type="text"
@@ -130,7 +130,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Pedro Machado..."
+                  placeholder="Lucas Nleng..."
                 />
               </div>
 
@@ -140,7 +140,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Email
+                  Email
                 </label>
                 <input
                   type="email"
@@ -148,7 +148,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="john@gmail.com"
+                  placeholder="luqnleng5@gmail.com"
                 />
               </div>
 
@@ -158,14 +158,14 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Message
+                  Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
-                  placeholder="Hello, I'd like to talk about..."
+                  placeholder="Bonjour, j’aimerais parler de… "
                 />
               </div>
 
@@ -176,7 +176,7 @@ export const ContactSection = () => {
                   "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? "En Cours..." : "Envoyer"}
                 <Send size={16} />
               </button>
             </form>

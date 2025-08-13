@@ -1,42 +1,41 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { FaGithub, FaLaravel, FaNode, FaReact,FaVuejs } from "react-icons/fa";
+import { SiExpress, SiPhpstorm, SiTypescript } from "react-icons/si"
+import { RiTailwindCssFill } from "react-icons/ri";
+import { DiDocker } from "react-icons/di";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  { name: "React", icon:<FaReact/>, category: "frontend" },
+  { name: "TypeScript", icon:< SiTypescript/>, category: "frontend" },
+  { name: "Tailwind CSS", icon:< RiTailwindCssFill/>, category: "frontend" },
+  { name: "Vue js", icon:< FaVuejs/>, category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  { name: "Laravel", icon:<FaLaravel/>, category: "backend" },
+  { name: "Express", icon:<SiExpress/>, category: "backend" },
+  { name: "Node Js", icon:<FaNode/>, category: "backend" },
 
-  // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  // outils
+  { name: "Docker", icon:<DiDocker/>, category: "outils" },
+  { name: "Github Actions",icon:<FaGithub/> , category: "outils" },
+  { name: "PHPStorm", icon:<SiPhpstorm/>, category: "outils" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["tous", "frontend", "backend", "outils"];
 
 export const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("tous");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => activeCategory === "tous" || skill.category === activeCategory
   );
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary"> Skills</span>
+           <span className="text-primary"> Competences</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -62,22 +61,16 @@ export const SkillsSection = () => {
               key={key}
               className="bg-card p-6 rounded-lg shadow-xs card-hover"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
+                  <span
+                    key={key}
+                    className="text-primary  py-1 px-3 text-xl rounded-full flex items-center gap-2 
+                         transition-all "
+                  >
+                    <span > {skill.icon}</span>
+                    <span>{skill.name}</span>
+                  </span>
               </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
-
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
-              </div>
-            </div>
+          
           ))}
         </div>
       </div>
