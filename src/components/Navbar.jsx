@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 const navItems = [
   { name: "Accueil", href: "#hero" },
@@ -50,7 +51,7 @@ export const Navbar = () => {
 
         {/* desktop nav */}
         <motion.div 
-          className="hidden md:flex space-x-8"
+          className="hidden md:flex space-x-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -68,6 +69,7 @@ export const Navbar = () => {
               {item.name}
             </motion.a>
           ))}
+          <ThemeToggle />
         </motion.div>
 
         {/* mobile nav */}
@@ -90,6 +92,7 @@ export const Navbar = () => {
                 transition={{ duration: 0.2 }}
               >
                 <X size={24} />
+                
               </motion.div>
             ) : (
               <motion.div

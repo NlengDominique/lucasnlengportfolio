@@ -39,7 +39,7 @@ export const AboutSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="text-primary">A Propos</span>
+          <span className="text-primary text-2xl md:text-3xl lg:text-4xl">A Propos</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

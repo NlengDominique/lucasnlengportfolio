@@ -71,7 +71,7 @@ export const ProjectsSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="text-primary">Mes Projets</span>
+          <span className="text-primary  text-2xl md:text-3xl lg:text-4xl">Mes Projets</span>
         </motion.h2>
 
         <motion.p 

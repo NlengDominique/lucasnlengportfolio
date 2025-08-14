@@ -94,7 +94,7 @@ export const ContactSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="text-primary">Contactez-moi</span>
+          <span className="text-primary text-2xl md:text-3xl lg:text-4xl">Contactez-moi</span>
         </motion.h2>
 
         <motion.p
@@ -226,8 +226,9 @@ export const ContactSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.7 }}
                 viewport={{ once: true }}
+                className=" flex flex-col"
               >
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label htmlFor="name" className="text-sm text-start font-medium mb-2">
                   Nom
                 </label>
                 <motion.input
@@ -238,7 +239,7 @@ export const ContactSection = () => {
                   onChange={(e) => setFormData({...formDta, name: e.target.value})}
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="Lucas Nleng..."
+                  placeholder="John Doe..."
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 />
@@ -250,8 +251,9 @@ export const ContactSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.8 }}
                 viewport={{ once: true }}
+                className="flex flex-col"
               >
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block text-start text-sm font-medium mb-2">
                   Email
                 </label>
                 <motion.input
@@ -262,7 +264,7 @@ export const ContactSection = () => {
                   onChange={(e) => setFormData({...formDta, email: e.target.value})}
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="luqnleng5@gmail.com"
+                  placeholder="jon5@gmail.com"
                   whileFocus={{ scale: 1.02 }}
                   transition={{ duration: 0.2 }}
                 />
@@ -273,8 +275,9 @@ export const ContactSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
                 viewport={{ once: true }}
+                className="flex flex-col"
               >
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label htmlFor="message" className="block text-start text-sm font-medium mb-2">
                   Message
                 </label>
                 <motion.textarea

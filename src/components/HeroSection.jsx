@@ -52,7 +52,7 @@ export const HeroSection = () => {
   return (
     <motion.div
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="relative  min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -111,7 +111,7 @@ export const HeroSection = () => {
       />
 
       {/* Main Content Container */}
-      <div className="container max-w-7xl mx-auto text-center z-10 relative">
+      <div className=" mt-12 container max-w-7xl mx-auto text-center z-10 relative">
         <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           {/* Welcome Text - Mobile Optimized */}
           <motion.div
@@ -120,12 +120,12 @@ export const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xs sm:text-sm lg:text-base text-primary/80 font-medium tracking-wider uppercase px-2"
           >
-            <motion.span
+            {/* <motion.span
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
               ✨ Bienvenue dans mon univers
-            </motion.span>
+            </motion.span> */}
           </motion.div>
 
           {/* Responsive Typewriter Title */}
@@ -175,7 +175,7 @@ export const HeroSection = () => {
               {description.split(' ').map((word, index) => (
                 <motion.span
                   key={index}
-                  className="inline-block mr-1 sm:mr-2"
+                  className=" text-xl inline-block mr-1 sm:mr-2"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ 
@@ -195,7 +195,7 @@ export const HeroSection = () => {
             className="pt-6 sm:pt-8 px-4 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 4.8 }}
+            transition={{ duration: 0.6, delay: 4.8 }}
           >
             <motion.a 
               href="#projects" 
@@ -231,14 +231,14 @@ export const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 5.2 }}
       >
-        <motion.span 
+        {/* <motion.span 
           className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3 font-medium text-center px-2"
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           <span className="hidden sm:inline">Découvrir mon travail</span>
           <span className="sm:hidden">Défiler</span>
-        </motion.span>
+        </motion.span> */}
         
         <motion.div
           className="relative"

@@ -50,7 +50,7 @@ export const SkillsSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="text-primary">Competences</span>
+          <span className="text-primary text-2xl md:text-3xl lg:text-4xl">Competences</span>
         </motion.h2>
 
         <motion.div 
