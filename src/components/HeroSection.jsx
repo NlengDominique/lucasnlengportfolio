@@ -55,7 +55,7 @@ export const HeroSection = () => {
       className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
     >
       {/* Responsive Background Particles */}
       <div className="absolute inset-0 pointer-events-none">
@@ -117,7 +117,7 @@ export const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xs sm:text-sm lg:text-base text-primary/80 font-medium tracking-wider uppercase px-2"
           >
             <motion.span
@@ -133,7 +133,7 @@ export const HeroSection = () => {
             className="px-2 sm:px-4 lg:px-0"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
             <motion.h1 
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold tracking-tight leading-tight break-words"
@@ -152,7 +152,7 @@ export const HeroSection = () => {
                   <motion.span
                     className="inline-block w-0.5 sm:w-1 h-6 sm:h-8 md:h-10 lg:h-12 xl:h-14 2xl:h-16 bg-primary ml-1 sm:ml-2"
                     animate={{ opacity: [1, 0, 1] }}
-                    transition={{ duration: 1, repeat: Infinity }}
+                    transition={{ duration: 0.5, repeat: Infinity }}
                   />
                 )}
               </motion.span>
@@ -163,14 +163,14 @@ export const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.5 }}
+            transition={{ duration: 0.5, delay: 2.5 }}
             className="px-4 sm:px-6 lg:px-8 xl:px-0"
           >
             <motion.p 
               className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground max-w-xs sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto leading-relaxed sm:leading-relaxed lg:leading-loose"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 3 }}
+              transition={{ duration: 0.5, delay: 3 }}
             >
               {description.split(' ').map((word, index) => (
                 <motion.span
@@ -195,7 +195,7 @@ export const HeroSection = () => {
             className="pt-6 sm:pt-8 px-4 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 4.8 }}
+            transition={{ duration: 0.5, delay: 4.8 }}
           >
             <motion.a 
               href="#projects" 

@@ -108,14 +108,14 @@ export const Navbar = () => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center md:hidden"
+              className="fixed inset-0 bg-background/95 backdrop-blur-md md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
               <motion.div 
-                className="flex flex-col space-y-8 text-xl"
+                className="flex flex-col h-screen bg-background/95 backdrop-blur-md space-y-8 py-24 text-xl"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
